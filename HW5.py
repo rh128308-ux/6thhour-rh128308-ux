@@ -43,6 +43,6 @@ twotwotwolist = ["Hiro", 16, False, "ZeroTwo", 2, False ]
 
 #9. Create a print statement that asks the user to input their own index value for the list on #8.
 
-print(twotwotwolist[int(input("enter index location:"))])
+print(twotwotwolist[int(input("enter index location:"))-1])
 
 
