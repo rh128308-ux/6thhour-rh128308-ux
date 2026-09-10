@@ -1,5 +1,5 @@
 #Name:Raphael Hennings
-#Class: 5th Hour
+#Class: 6th Hour
 #Assignment: HW6
 from statistics import median
 
