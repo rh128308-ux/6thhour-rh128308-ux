@@ -1,5 +1,4 @@
 #Name:Raphael Hennings
-#Class: 6th Hour
 #Assignment: HW6
 from statistics import median
 
@@ -19,15 +18,13 @@ emplist = []
 
 #4. Remove the median number from the first list and add it to the second list.
 
-intmintlist = median(intlist)
-emplist.insert(0,intmintlist)
-
+mediannum = intlist.pop(4)
+emplist.append(mediannum)
 
 #5. Remove the first number from the first list and add it to the second list.
 
-intzeroofintlist = intlist[0]
-emplist.insert(0,intzeroofintlist)
-del intlist[0]
+mediannumtwo = intlist.pop(0)
+emplist.append(mediannumtwo)
 
 #6. Print both lists.
 
@@ -36,15 +33,12 @@ print(intlist)
 
 #7. Add the two numbers in the second list together and print the result.
 
-print(emplist[0] + emplist[1])
+emplistsum = (emplist[0] + emplist[1])
+print(emplistsum)
 
 #8. Move the number back to the first list (like you did in #4 and #5 but reversed).
 
-intlist.sort(reverse=False)
-intnineofemplist = emplist[0]
-intmedianofemplist = emplist[1]
-intlist.insert(0,intnineofemplist)
-intlist.insert(0,intmedianofemplist)
+intlist.append(emplistsum)
 
 #9. Sort the first list from lowest to highest and print it.
 
