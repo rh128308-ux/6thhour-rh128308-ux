@@ -49,7 +49,7 @@ fourrandintlist.sort()
 
 #10. Create a list with 5 names of other students in this class and print the list.
 
-studentsnamelist = ["Braylee", "Malachi", "Bensen", "Owyn, Raphael"]
+studentsnamelist = ["Braylee", "Malachi", "Bensen", "Owyn", "Nate"]
 print(studentsnamelist)
 
 #11. Shuffle the list in #10 and print the list again.
