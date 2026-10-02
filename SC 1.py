@@ -48,7 +48,7 @@ enemy_creature_dictionary = {
 
 def stat_change():
 
-   Enemynumber_str = str(input("Which Enemies attackdamge do you wanna change?(E1,E2,E3,E4,E5)"))
+   Enemynumber_str = str(input("Which Enemies stat do you wanna change?(E1,E2,E3,E4,E5)"))
    Enemy_key_str = str(input("What stat do you wanna change?(health,damage,armor)"))
    Change_of_stat = int(input("How high should be the stat?"))
    enemy_creature_dictionary[Enemynumber_str].update({Enemy_key_str: Change_of_stat})
