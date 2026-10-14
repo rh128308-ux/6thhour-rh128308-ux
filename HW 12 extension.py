@@ -49,6 +49,10 @@ if Choice_one == "yes":
                 log_in_int += 1
             else:
                 print("Wrong Password. Try Again")
+                print("3 failed tries")
+                time.sleep(25)
+                print("try again")
+                login()
     elif log_in_int >= 3:
         print("login incorrect")
         print("3 failed tries")
