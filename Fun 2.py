@@ -35,7 +35,7 @@ def gamblegame():
         print(wining_number)
         print("You lost,:(")
         print("Your new balance is")
-        yourmoney = yourmoney -
+        yourmoney =
         print(yourmoney)
         again = input("Do you want to play again? (y/n)")
         if again == "y"or "yes":

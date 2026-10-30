@@ -47,10 +47,12 @@ def joke():
                     print("Faxxen")
                 elif answer2 == "yes":
                     print("You really know what you are doing")
+    elif joke == "no":
+        print("Guess not")
 
 
 
-def login():
+def  login():
     global wifi, login, admin, log_in_int, password_one, password_two, login_in_int
 Choice_one = input("do you want to log in (yes/no): ")
 if Choice_one == "yes":
