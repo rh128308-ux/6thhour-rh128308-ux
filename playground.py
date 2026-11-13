@@ -4,11 +4,9 @@
 
 #ITS NOIT FINISSHHHHEDDDD ::::::((((((
 
-#imports
+import random as r
 import random
 import time
-
-from fun3 import gambling
 
 def gamblingalone():
     winnum = 0
@@ -48,63 +46,17 @@ def gamblingalone():
                 login()
 
 def gamblingtogether():
-    playernum = int(input("Enter your Player Number: "))
-    for x in range(playernum):
-        play = {
-        "1" : {
-            "name" : "Orc_1",
-            "money" : 1000,
-            "guess" : 6
-            },
-        "2" : {
-            "name" : "Orc_1",
-            "money" : 1000,
-            "guess" : 6
-            },
-        "3" : {
-            "name" : "Orc_1",
-            "health" : 1206,
-            "guess" : 6
-            }
+        def gen_player(player_list):
+            player_count = int(input("How many players?"))
+            for i in range(player_count):
+                player_list["player_" + str(i)] = {}
+                player_list["player_" + str(i)].update({"Name": "Orc " + str(i + 1),
+                                                        "Money": r.randint(500, 1000),
+                                                        "Guess": r.randint(1, 6)})
 
-        }
-
-
-
-    gamble_range_min = int(input("Enter your Gambling Range Min"))
-    gamble_range_max = int(input("Enter your Gambling Range Max"))
-    print("Pick a number between", gamble_range_min, "and", gamble_range_max)
-    gamblenum = int(input("Your Gambling Number: "))
-    wining_number = random.randint(gamble_range_min, gamblenum)
-    print("loading")
-    time.sleep(1)
-    print("...")
-    time.sleep(1)
-    print("loading")
-    time.sleep(1)
-    print("...")
-    if wining_number == gamblenum:
-        print(gamblenum)
-        print("You won, amazing")
-        print("Congrats")
-        yourmoney = 3
-        yourmoney = (gamble_range_max - gamble_range_min) * yourmoney
-        print(yourmoney)
-    else:
-        print(wining_number)
-        print("You lost,:(")
-        print("Your new balance is")
-        yourmoney = 0
-        print(yourmoney)
-        again = input("Do you want to play again? (y/n)")
-        if again == "y" or "yes":
-            print("okay, next round")
-            gamblingalone()
-        else:
-            print("okay, see you next time")
-            restart = input("Would you like to restart? (y/n)")
-            if restart == "y" or "yes":
-                login()
+        player_list = {}
+        gen_player(player_list)
+        print(player_list)
 
 
 def settings():
