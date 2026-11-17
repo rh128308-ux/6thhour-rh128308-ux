@@ -57,7 +57,6 @@ def rate():
 
 rate()
 
-print(player_list)
 
 x = 0
 
