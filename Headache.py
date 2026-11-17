@@ -31,7 +31,7 @@ player_count = int(input("How many models?"))
 for i in range(player_count):
     player_list["model_" + str(i + 1)] = {}
     player_list["model_" + str(i + 1)].update({"Name": "model " + str(i + 1),
-                                                "rating": 0
+                                                "rating": []
                                                 })
 
 
@@ -42,26 +42,24 @@ def rate():
         print("player" + str(i + 1),"'s rating turn")
         for j in range(player_count-1):
             u = int(input("Rating of model " + str(j + 1) + ": "))
-            if u < 0:
+            if u < 1:
                 print("rating too low")
-                print("rerate")
-                rate()
+                u = 1
+                player_list["model_" + str(j + 1)].update({"rating": 0})
 
             elif u > 5:
                 print("rating too high")
-                print("rerate")
-                rate()
+                u = 5
+                player_list["model_" + str(j + 1)].update({"rating": u})
             else:
                 print("rating ok")
-                player_list["model_" + str(j + 1)].update({"rating": u})
+                player_list["model_" + str(j + 1)].
 
 rate()
 
 
 x = 0
 
-for k in range(player_count):
-    x += player_list["model_" + str(k + 1)]["rating"]
 
 average_score = x/player_count
 print("average: ",average_score)
